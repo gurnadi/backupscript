@@ -15,9 +15,9 @@ TANGGAL=`date +%Y%m%d`
 
 mount -o rw,udp,async,rsize=65536,wsize=65536 $BACKUPNFS $BACKUPDIR
 
-if [ "$WEEKLY" != "Saturday" ] && [ "$MONTHLY" != "01" ]; then
+#if [ "$WEEKLY" != "Saturday" ] && [ "$MONTHLY" != "01" ]; then
         tar czpvf $BACKUPDIR/daily/namaclient-`date +%Y%m%d`-`date +%H:%M`.tar.gz $WEBDIR;
-fi
+#fi
 
 if [ "$MONTHLY" == "01" ]; then
         CHECKINGMONTHLY=`ls  $BACKUPDIR/monthly/ | grep $TANGGAL`

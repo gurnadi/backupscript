@@ -7,4 +7,4 @@ chmod 700 /root/backupscript.sh
 
 You can running this script using crontab 
 
-* */6 * * * /root/backupscript.sh
+* * */6 * * * /root/backupscript.sh
